@@ -3,30 +3,29 @@
 <head>
   <meta charset="UTF-8">
   <title>日英対応検索サイト</title>
-  <!-- CSS を読み込む -->
   <link rel="stylesheet" href="style.css">
-  <!-- PapaParse を CDN から読み込み -->
+  <!-- CSVパース用ライブラリ -->
   <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
 </head>
 <body>
-  <h1>カード名 日→英 検索ツール</h1>
-
-  <!-- ここに検索キーワードを入力 -->
+  <h1>ポケモンカード名 日→英 検索ツール</h1>
+  <!-- 検索入力 -->
   <input type="text" id="searchInput" placeholder="例：ミニーブ">
 
-  <!-- 検索結果を左右に並べる -->
-  <div class="results">
-    <div>
-      <h3>日本語</h3>
-      <ul id="japaneseList"></ul>
-    </div>
-    <div>
-      <h3>英語</h3>
-      <ul id="englishList"></ul>
-    </div>
-  </div>
+  <!-- 結果表示：表形式 -->
+  <table id="resultsTable">
+    <thead>
+      <tr>
+        <th>日本語</th>
+        <th>英語</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- ここに検索結果が入る -->
+    </tbody>
+  </table>
 
-  <!-- 自分で書くスクリプトを読み込む -->
+  <!-- 自作スクリプト -->
   <script src="script.js"></script>
 </body>
 </html>
